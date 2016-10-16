@@ -1,0 +1,8 @@
+<ul class="found-items">
+    <li ng-repeat="item in ctrl.items" class="{{$index === 0 ? 'first' : 'next'}}">
+        <div ng-bind-html="item.name | asHtml"></div>
+        <div ng-bind-html="item.description | asHtml"></div>
+        <button class="btn btn-danger" ng-click="ctrl.onRemove({index: $index});">Don't want this one!</button>
+    </li>
+</ul>
+<h3 ng-if="ctrl.nothingFound()">Nothing found.</h3>
