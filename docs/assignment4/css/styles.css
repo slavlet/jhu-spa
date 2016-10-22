@@ -1,0 +1,38 @@
+section.main {
+    margin-top: 50px;
+
+}
+
+
+section.main .jumbotron {
+    background: none;
+}
+
+.btn-link {
+    cursor: pointer;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "    \27E8    ";
+}
+
+.category-item {
+    display: block;
+    height: 2em;
+}
+
+.category-item span {
+    margin-right: .8em;
+    width: 2.5em;
+    background-color: #337ab7;
+}
+
+.menu-item .list-group-item-heading {
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<div class="list-group">
+    <div class="list-group-item menu-item" ng-repeat="item in $ctrl.items">
+        <h4 class="list-group-item-heading">{{item.name}}</h4>
+        <p class="list-group-item-text">{{item.description}}</p>
+        <p class="list-group-item-text">{{item.small_portion_name}} {{item.price_small | currency}}</p>
+        <p class="list-group-item-text">{{item.large_portion_name}} {{item.price_large | currency}}</p>
+    </div>
+</div>
