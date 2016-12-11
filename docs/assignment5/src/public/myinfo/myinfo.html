@@ -1,0 +1,44 @@
+<div id="main-content" class="container">
+    <h2>My Info</h2>
+    <div ng-if="!myInfoCtrl.myinfo">
+        <span>Not Signed Up Yet.</span> <a ui-sref="public.signup">Sign up Now!</a>
+    </div>
+    <div class="form-horizontal" ng-if="myInfoCtrl.myinfo">
+        <div class="form-group">
+            <div class="col-sm-2 control-label">First name:</div>
+            <div class="col-sm-10 control-value">{{myInfoCtrl.myinfo.firstName}}</div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2 control-label">Last name:</div>
+            <div class="col-sm-10 control-value">{{myInfoCtrl.myinfo.lastName}}</div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2 control-label">Email:</div>
+            <div class="col-sm-10 control-value">{{myInfoCtrl.myinfo.email}}</div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2 control-label">Phone number:</div>
+            <div class="col-sm-10 control-value">{{myInfoCtrl.myinfo.phone}}</div>
+        </div>
+
+        <h3 class="favorite-dish">Favorite dish</h3>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="menu-item-photo">
+                    <div>{{myInfoCtrl.favoriteDish.short_name}}</div>
+                    <img class="img-responsive" width="250" height="150"
+                         ng-src="images/menu/{{myInfoCtrl.category}}/{{myInfoCtrl.favoriteDish.short_name}}.jpg"
+                         alt="{{myInfoCtrl.favoriteDish.name}}">
+                </div>
+            </div>
+            <div class="menu-item-description col-sm-8">
+                <h3 class="menu-item-title">{{myInfoCtrl.favoriteDish.name}}</h3>
+                <p class="menu-item-details">{{myInfoCtrl.favoriteDish.description}}</p>
+                <div class="menu-item-price">
+                    {{myInfoCtrl.favoriteDish.price_small | currency}}<span> {{myInfoCtrl.favoriteDish.small_portion_name}}</span>
+                    {{myInfoCtrl.favoriteDish.price_large | currency}}<span>{{myInfoCtrl.favoriteDish.large_portion_name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
